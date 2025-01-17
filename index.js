@@ -19,9 +19,12 @@ app.use(
 
 // on indique le chemin de
 const routes = require("./routes/products")
+const cartRoutes = require("./routes/cart");
 app.use(routes);
+app.use("/api",cartRoutes);
 
 //on indique que l'application va ecouter sur le port 5000 et on retourne message dans le terminal
 app.listen(5000, () => {
     console.log("Serveur lancer sur le port 5000");
 });
+
